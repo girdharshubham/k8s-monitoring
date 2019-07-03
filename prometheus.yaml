@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: monitoring
   name: prometheus
   labels:
     app: prometheus
@@ -39,6 +40,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: monitoring
   name: prometheus
   labels:
     app: prometheus
@@ -54,6 +56,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: monitoring
   name: prometheus
   labels:
     app: prometheus
